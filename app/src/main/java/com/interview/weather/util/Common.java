@@ -6,18 +6,29 @@ import com.interview.weather.models.Place;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class Common {
+    // Variables to determine types of ViewHolders
     public static final int TYPE_COUNTRY = 0;
     public static final int TYPE_CITY = 1;
 
+    /**
+     * Sort the list of city based on the country.
+     * @param list
+     * @return
+     */
     public static List<City> sortCity(List<City> list) {
         Collections.sort(list, (city, t1) -> city.getCountryName().compareTo(t1.getCountryName()));
         return list;
     }
 
+    /**
+     * Add countries to the list of cities,
+     * assuming the cities have been sorted by the country.
+     * @param list
+     * @return
+     */
     public static List<Place> addCountries(List<City> list) {
         List<Place> addedCountries = new ArrayList<>();
 

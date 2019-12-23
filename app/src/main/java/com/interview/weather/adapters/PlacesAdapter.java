@@ -3,7 +3,6 @@ package com.interview.weather.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,10 +14,10 @@ import com.interview.weather.util.Common;
 
 import java.util.List;
 
-public class CitiesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class PlacesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     protected final List<Place> places;
 
-    public CitiesAdapter(final List<Place> cities) {
+    public PlacesAdapter(final List<Place> cities) {
         this.places = cities;
     }
 
@@ -56,6 +55,11 @@ public class CitiesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
+    /**
+     * Method to set the text value of either CountryTextViewHolder or CityTextViewHolder.
+     * @param vh1
+     * @param position
+     */
     private void configureViewHolder(TextViewHolder vh1, int position) {
         Place place = places.get(position);
         if (place != null) {
@@ -63,28 +67,22 @@ public class CitiesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
+    /**
+     * ViewHolder class for City.
+     */
     class CityTextViewHolder extends TextViewHolder {
-        CityTextViewHolder(final View itemView) {
+        public CityTextViewHolder(final View itemView) {
             super(itemView, R.id.city_name);
         }
     }
 
+    /**
+     * ViewHolder class for Country
+     */
     class CountryTextViewHolder extends TextViewHolder {
         public CountryTextViewHolder(@NonNull View itemView) {
             super(itemView, R.id.country_name);
         }
     }
 
-    abstract class TextViewHolder extends RecyclerView.ViewHolder {
-        private TextView textView;
-
-        public TextViewHolder(@NonNull View itemView, int viewId) {
-            super(itemView);
-            textView=(itemView).findViewById(viewId);
-        }
-
-        public TextView getTextView(){
-            return textView;
-        }
-    }
 }
