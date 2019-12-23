@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.interview.weather.network.WeatherNetworkClient;
 import com.interview.weather.network.WeatherNetworkClientImpl;
 import com.interview.weather.adapters.CitiesAdapter;
+import com.interview.weather.util.Common;
 import com.interview.weather.util.GetCitiesResponse;
 
 public class JavaMainActivity extends AppCompatActivity {
@@ -36,7 +37,8 @@ public class JavaMainActivity extends AppCompatActivity {
         }
 
         if (response != null) {
-            citiesList.setAdapter(new CitiesAdapter(response.cities));
+            citiesList.setAdapter(new CitiesAdapter(Common.groupByCountries(response.cities)));
         }
     }
+
 }

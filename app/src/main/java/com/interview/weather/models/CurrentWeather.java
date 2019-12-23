@@ -2,14 +2,13 @@ package com.interview.weather.models;
 
 // No need to change
 public class CurrentWeather {
-
-    public final String longDescription;
-    public final float feelsLikeCelsius;
-    public final short rainChancePercent;
-    public final short humidityPercent;
-    public final String airPressureDescription;
-    public final String windDirection;
-    public final float windSpeed;
+    private final String longDescription;
+    private final float feelsLikeCelsius;
+    private final short rainChancePercent;
+    private final short humidityPercent;
+    private final String airPressureDescription;
+    private final String windDirection;
+    private final float windSpeed;
 
     public CurrentWeather(
             final String longDescription,
@@ -26,5 +25,33 @@ public class CurrentWeather {
         this.airPressureDescription = airPressureDescription;
         this.windDirection = windDirection;
         this.windSpeed = windSpeed;
+    }
+
+    public String getLongDescription() {
+        return longDescription;
+    }
+
+    public float getFeelsLikeCelsius() {
+        return feelsLikeCelsius;
+    }
+
+    public short getRainChancePercent() {
+        return rainChancePercent;
+    }
+
+    public short getHumidityPercent() {
+        return humidityPercent;
+    }
+
+    public String getAirPressureDescription() {
+        return airPressureDescription;
+    }
+
+    public String getWindDirection() {
+        return windDirection;
+    }
+
+    public float getWindSpeed() {
+        return windSpeed;
     }
 }
