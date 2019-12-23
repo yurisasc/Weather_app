@@ -1,4 +1,7 @@
-package com.interview.weather;
+package com.interview.weather.network;
+
+import com.interview.weather.util.GetCitiesResponse;
+import com.interview.weather.util.GetWeatherForCityResponse;
 
 import java.io.IOException;
 

@@ -1,4 +1,6 @@
-package com.interview.weather;
+package com.interview.weather.util;
+
+import com.interview.weather.models.City;
 
 import java.util.List;
 

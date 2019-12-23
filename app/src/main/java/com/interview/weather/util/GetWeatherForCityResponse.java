@@ -1,4 +1,7 @@
-package com.interview.weather;
+package com.interview.weather.util;
+
+import com.interview.weather.models.CurrentWeather;
+import com.interview.weather.models.PredictedWeather;
 
 import java.util.Map;
 

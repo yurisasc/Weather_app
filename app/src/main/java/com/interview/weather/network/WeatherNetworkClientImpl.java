@@ -1,6 +1,12 @@
-package com.interview.weather;
+package com.interview.weather.network;
 
 import android.util.Log;
+
+import com.interview.weather.util.GetCitiesResponse;
+import com.interview.weather.util.GetWeatherForCityResponse;
+import com.interview.weather.models.City;
+import com.interview.weather.models.CurrentWeather;
+import com.interview.weather.models.PredictedWeather;
 
 import java.io.IOException;
 import java.util.ArrayList;

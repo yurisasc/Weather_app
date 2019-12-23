@@ -1,4 +1,4 @@
-package com.interview.weather;
+package com.interview.weather.models;
 
 // No need to change
 public class CurrentWeather {
